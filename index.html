@@ -11,7 +11,14 @@
             const etchrender = document.querySelector('#etchContainer');
 
             function render() {
-                
+                for (var y = 0; y < etchY; y++) {
+                    for (var x = 0; x < etchX; x++){
+                        var etchbox = document.createElement('div');
+                        etchbox.classList.add('box');
+                        etchbox.grid-column = y;
+                        etchbox.grid-row = x;
+                    }
+                }
             }
         </script>
     </head>
