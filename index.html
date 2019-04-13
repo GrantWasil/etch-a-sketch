@@ -3,27 +3,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <title>Etch-A-Sketch | Grant Wasil</title>
-        <script>
-            var etchX = 16;
-            var etchY = 16;
-            const etchrender = document.querySelector('#etchContainer');
-
-            function render() {
-                for (var y = 0; y < etchY; y++) {
-                    for (var x = 0; x < etchX; x++){
-                        var etchbox = document.createElement('div');
-                        etchbox.classList.add('box');
-                        etchbox.grid-column = y;
-                        etchbox.grid-row = x;
-                    }
-                }
-            }
-        </script>
     </head>
     <body>
             <h1 class="pageTitle">Etch-A-Sketch</h1>
-            <div id="etchContainer"></div>
+            <div id="etchRender"></div>
     </body>
+    <script>
+        var etchX = 16;
+        var etchY = 16;
+        const etchRender = document.querySelector('#etchRender');
+        render();
+
+        function render() {
+            for (var y = 0; y < etchY; y++) {
+                for (var x = 0; x < etchX; x++){
+                    const box = document.createElement('div');
+                    box.classList.add('box');
+                    box.style.width = (960 / etchY).toString() + 'px';
+                    etchRender.appendChild(box);
+                }
+            }
+        }
+
+
+
+        
+    </script>
 </html>
