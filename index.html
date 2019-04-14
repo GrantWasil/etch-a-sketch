@@ -87,6 +87,10 @@
           etchX = resetNumber;
           etchY = resetNumber;
           render();
+          var first = document.querySelectorAll('.box');
+          for (var i = 0; i < first.length; i++) {
+            first[i].addEventListener('mouseover', firstHover, false);
+          }
         }
 
         var first = document.querySelectorAll('.box');

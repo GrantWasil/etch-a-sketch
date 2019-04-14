@@ -19,13 +19,15 @@ body {
 .mainContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #etchRender{
   align-self: center;
   background-color: #7898B3;
   border: 1px solid #B39466;
+  min-width: 500px;
   width: 500px;
   height: 500px;
   display: flex;
@@ -40,6 +42,7 @@ body {
   align-self: center;
   margin-bottom: 40px;
   justify-content: center;
+  padding-left: 20px;
 }
 
 .box {
