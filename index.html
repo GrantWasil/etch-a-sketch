@@ -8,8 +8,17 @@
     </head>
     <body>
             <div class="main">
-            <h1 class="pageTitle">Etch-A-Sketch</h1>
-            <div id="etchRender"></div>
+              <h1 class="pageTitle">Etch-A-Sketch</h1>
+              <div class="mainContainer">
+                <div id="etchRender"></div>
+                  <div id="reset">
+                    <p id="resetWords">How many boxes per row?</p>
+                    <form>
+                      <input id="resetValue" type="text" name="etchX">
+                    </form>
+                    <button onclick="resetGrid()">Reset</button>
+                  </div>
+              </div>
             </div>
     </body>
     <script>
@@ -19,6 +28,10 @@
         render();
 
         function render() {
+          var remaining = document.querySelectorAll('.box');
+          for (var i = 0; i < remaining.length; i++){
+          etchRender.removeChild(remaining[i]);
+          }
             for (var y = 0; y < etchY; y++) {
                 for (var x = 0; x < etchX; x++){
                     const box = document.createElement('div');
@@ -68,5 +81,17 @@
           first[i].addEventListener('mouseover', firstHover, false);
         }
 
+
+        function resetGrid() {
+          var resetNumber = document.getElementById('resetValue').value;
+          etchX = resetNumber;
+          etchY = resetNumber;
+          render();
+        }
+
+        var first = document.querySelectorAll('.box');
+        for (var i = 0; i < first.length; i++) {
+          first[i].addEventListener('mouseover', firstHover, false);
+        }
     </script>
 </html>
