@@ -12,7 +12,8 @@
               <div class="mainContainer">
                 <div id="etchRender"></div>
                   <div id="reset">
-                    <p id="resetWords">How many boxes per row?</p>
+                    <p id="resetWords">How many boxes per row? <br>
+                      (eg. 15 for a 15x15 grid)</p>
                     <form>
                       <input id="resetValue" type="text" name="etchX">
                     </form>
@@ -36,7 +37,7 @@
                 for (var x = 0; x < etchX; x++){
                     const box = document.createElement('div');
                     box.classList.add('box');
-                    box.style.width = (460 / etchY).toString() + 'px';
+                    box.style.width = (500 / etchY).toString() + 'px';
                     etchRender.appendChild(box);
                 }
             }
