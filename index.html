@@ -7,8 +7,10 @@
         <title>Etch-A-Sketch | Grant Wasil</title>
     </head>
     <body>
+            <div class="main">
             <h1 class="pageTitle">Etch-A-Sketch</h1>
             <div id="etchRender"></div>
+            </div>
     </body>
     <script>
         var etchX = 16;
@@ -21,14 +23,50 @@
                 for (var x = 0; x < etchX; x++){
                     const box = document.createElement('div');
                     box.classList.add('box');
-                    box.style.width = (960 / etchY).toString() + 'px';
+                    box.style.width = (460 / etchY).toString() + 'px';
                     etchRender.appendChild(box);
                 }
             }
         }
 
+        var first = document.querySelectorAll('.box');
 
+        function firstHover() {
+          if (this.classList.contains('ninthHover')) {
+            this.classList.add('tenthHover');
+          }
+          else if (this.classList.contains('eightHover')) {
+            this.classList.add('ninthHover');
+          }
+          else if (this.classList.contains('seventhHover')) {
+            this.classList.add('eightHover');
+          }
+          else if (this.classList.contains('sixthHover')) {
+            this.classList.add('seventhHover');
+          }
+          else if (this.classList.contains('fifthHover')) {
+            this.classList.add('sixthHover');
+          }
+          else if (this.classList.contains('fourthHover')) {
+            this.classList.add('fifthHover');
+          }
+          else if (this.classList.contains('thirdHover')) {
+            this.classList.add('fourthHover');
+          }
+          else if (this.classList.contains('secondHover')) {
+            this.classList.add('thirdHover');
+          }
+          else if (this.classList.contains('firstHover')) {
+            this.classList.add('secondHover');
+          }
+          else {
+            this.classList.add('firstHover');
+          }
+        }
 
-        
+        for (var i = 0; i < first.length; i++) {
+          first[i].addEventListener('mouseover', firstHover, false);
+        }
+
     </script>
 </html>

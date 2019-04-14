@@ -1,17 +1,62 @@
+body {
+  background-color: #FFE8C4;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
 
+.pageTitle {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-self: center;
+}
 
 #etchRender{
-    background-color: brown;
-    border: 1px solid black;
-    width: 960px;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+  align-self: center;
+  background-color: #7898B3;
+  border: 1px solid #B39466;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 40px;
 }
 
 .box {
-    border: 1px solid black;
-    flex-basis: auto;
-    flex-grow: 1;
+  border: 1px solid #C4E5FF;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+.firstHover {
+  background-color: #e5e5e5;
+}
+.secondHover {
+  background-color: #cccccc;
+}
+.thirdHover {
+  background-color: #b2b2b2;
+}
+.fourthHover {
+  background-color: #999999;
+}
+.fifthHover {
+  background-color: #7f7f7f;
+}
+.sixthHover {
+  background-color: #666666;
+}
+.seventhHover {
+  background-color: #4c4c4c;
+}
+.eightHover {
+  background-color: #323232;
+}
+.ninthHover {
+  background-color: #191919;
+}
+.tenthHover {
+  background-color: #000000;
 }
